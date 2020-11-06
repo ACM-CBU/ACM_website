@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :alumnis
   namespace :api do
     namespace :v1 do
       get 'test1', to: "tests#test1"
