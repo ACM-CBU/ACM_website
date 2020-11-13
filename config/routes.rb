@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
   resources :alumnis
+  
+  get 'login', to: 'admin_sessions#new'
+  post 'login', to: 'admin_sessions#create'
+  get 'logout', to: 'admin_sessions#destroy'
+
   namespace :api do
     namespace :v1 do
       get 'test1', to: "tests#test1"
